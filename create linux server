@@ -2,7 +2,7 @@ what is server?
 server having lot many services.
 each service have it's separate protocol.
 each server having 65,536 ports (0 to 65535).
-some examples of protocols and ports are 
+some examples of protocols and their defualt ports are 
 SSH -- 22
 HTTP -- 80
 HTTPS -- 443
@@ -27,8 +27,9 @@ putty
 mobaxtrem
 
 steps:
-a) genrate public key and private key 
 
+a) genrate public key and private key
+-------------------------------------
 1. install gitbash
 2. craete folder in desktop/laptop
 3. navigate that folder in gitbash by using cd command
@@ -36,7 +37,7 @@ a) genrate public key and private key
 ex: ssh-keygen -f linux_keys
 
 b) add public key to server/instance
-
+-------------------------------------
 1. create aws account and login to aws console
 2. search EC2 intances and go to network& security
 3. select key pair and click on actions and select import key pair
@@ -44,14 +45,15 @@ b) add public key to server/instance
 5. click on import key
 
 c) create security group/firewall system
-
+------------------------------------------
 security group is allows the authorized ports only.
 1. click on security group and fill name as allow-ssh and provide description
 2. add inbound rule and select type as SSH and select the network notation
     0.0.0.0/0 defines public can access
 3. click on create security group
-d) creating server/instance
 
+d) creating server/instance
+----------------------------
 1. goto EC2 and click on launch instance
 2. give some name for instance
 3. select os as amazon-linux 2023 and select instance type as t2micro
