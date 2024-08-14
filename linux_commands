@@ -1,0 +1,32 @@
+Linux commands
+---------------
+syntax : coomand-name <options> <inputs>
+
+pwd --> present work directory 
+cd --> change directory
+cd / --> change to root dirctory 
+cd .. --> change to previous directory (one back step )
+
+File handling commands
+----------------------
+
+ls --> listout the files
+ls -l --> listout the files with long format
+ls -t --> listout the file with creation of time 
+ls -r --> listout the files with reverse order
+ls -lrt --> listput the file with creation of time in reverse order
+touch filename --> create empty file
+cat filename --> open the file 
+cat > filename --> insert or overwrite the information into a file
+cat >> filename --> appened the information into a file 
+rm filename --> delete the file 
+mv old_filename new_filename --> rename the file name 
+cp old_filename new_filename --> creating a copy of filename
+
+directory handling commands
+---------------------------
+
+mkdir dir_name --> to create directory 
+rmdir dir_name --> to delete empty directory
+rm -r dir_name --> to delete non-empty directory 
+cd dir_name -->  to change the directory
