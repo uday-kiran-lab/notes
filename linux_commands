@@ -1,6 +1,9 @@
 Linux commands
 ---------------
-syntax : coomand-name <options> <inputs>
+syntax : command-name <options> <inputs>
+options -> it is started with '-letter' 
+syntax for knowing about commands --> command-name --help
+
 
 pwd --> present work directory 
 cd --> change directory
