@@ -26,10 +26,6 @@ gitbash --> we can use as git, linux server and mini Linux in windows
 putty
 mobaxtrem
 
-Linux commands
-pwd --> present work directory 
-cd --> change directory
-
 steps:
 a) genrate public key and private key 
 
@@ -44,7 +40,7 @@ b) add public key to server/instance
 1. create aws account and login to aws console
 2. search EC2 intances and go to network& security
 3. select key pair and click on actions and select import key pair
-4. give name some name (daws-81s), paste the public key under description(public key present in .pub file)
+4. give some name (daws-81s), paste the public key under description(public key present in .pub file)
 5. click on import key
 
 c) create security group/firewall system
@@ -53,7 +49,7 @@ security group is allows the authorized ports only.
 1. click on security group and fill name as allow-ssh and provide description
 2. add inbound rule and select type as SSH and select the network notation
     0.0.0.0/0 defines public can access
-
+3. click on create security group
 d) creating server/instance
 
 1. goto EC2 and click on launch instance
@@ -68,8 +64,40 @@ d) creating server/instance
 $ ssh -i <private_key_file> <username>@ip.address
 by defualt aws instanec username as ec2-user
 ip-address copied from aws insatnce(use public-ip)
-$ ssh -i linux_key.pem ec2-user@
+$ ssh -i linux_key.pem ec2-user@public-ipaddress
 
+Linux commands
+---------------
+syntax : coomand-name <options> <inputs>
+
+pwd --> present work directory 
+cd --> change directory
+cd / --> change to root dirctory 
+cd .. --> change to previous directory (one back step )
+
+File handling commands
+----------------------
+
+ls --> listout the files
+ls -l --> listout the files with long format
+ls -t --> listout the file with creation of time 
+ls -r --> listout the files with reverse order
+ls -lrt --> listput the file with creation of time in reverse order
+touch filename --> create empty file
+cat filename --> open the file 
+cat > filename --> insert or overwrite the information into a file
+cat >> filename --> appened the information into a file 
+rm filename --> delete the file 
+mv old_filename new_filename --> rename the file name 
+cp old_filename new_filename --> creating a copy of filename
+
+directory handling commands
+---------------------------
+
+mkdir dir_name --> to create directory 
+rmdir dir_name --> to delete empty directory
+rm -r dir_name --> to delete non-empty directory 
+cd dir_name -->  to change the directory
 
 
 
