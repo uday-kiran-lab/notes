@@ -1,7 +1,7 @@
 Linux commands
 ---------------
 syntax : command-name <options> <inputs>
-options -> it is started with '-letter' 
+options -> it is started with '-character' and '--word'
 syntax for knowing about commands --> command-name --help
 
 
@@ -18,13 +18,62 @@ ls -l --> listout the files with long format
 ls -t --> listout the file with creation of time 
 ls -r --> listout the files with reverse order
 ls -lrt --> listput the file with creation of time in reverse order
+ls -a --> shows all files
+ls -la -> shows all files with lengthy format
 touch filename --> create empty file
 cat filename --> open the file 
 cat > filename --> insert or overwrite the information into a file
 cat >> filename --> appened the information into a file 
 rm filename --> delete the file 
 mv old_filename new_filename --> rename the file name 
-cp old_filename new_filename --> creating a copy of filename
+cp source_file_name destination_file_name --> creating a copy of filename
+--> /etc/paswwd --> it contains users information
+cp /etc/passwd users --> it copy the passwd file from /etc dir to prsent dir with users name
+mv source_file_name destination_file_name --> move the file
+grep --> is used find the partcular pattern or word 
+grep <word-to-find> <file_name>
+grep sbin passwd
+** linux is case sensitive
+echo -->> used to print the content 
+echo "hello world!"
+pipe ' | ' --> used comibine the o/p from two commands
+
+
+file download commands
+-----------------------
+wget --> download teh file from the URL
+wget <URL>
+
+curl --> show the content from URL
+curl <URL>
+
+file handling commands
+-----------------------
+cut --> it is used to split the content by using delimiters 
+echo "welocome to devops mr.kiran" | cut -d " " -f1
+d --> indicates delimiter
+f --> fragument
+
+awk --> it is used to split the content by using fragment type
+--without counting the last fragment we use can sort out last fragment
+awk -F "/" '{print $1F}' --> get the first fragment
+awk -F "/" '{print $NF}' --> get the Last fragment (F and N should be in capital letters only)
+awk -F "/" '{print $1F,$2F}' --> it will displays the first and last fragaments 
+
+head --> used to print top 10 lines in a file
+tail --> used to print botton 10 lines a file
+head <file_name>
+tail <file_name>
+head -n 5 < file_name> --> used to print top 5 lines in a file 
+tail -n 2 <file_name> --> used to print bottom 2 lines
+** by using tail command we see running log in server 
+* it will present in server log file
+** server log file is present into /var/log/messgaes
+tail -f <serverlog.fie>
+
+
+
+
 
 directory handling commands
 ---------------------------
@@ -33,3 +82,47 @@ mkdir dir_name --> to create directory
 rmdir dir_name --> to delete empty directory
 rm -r dir_name --> to delete non-empty directory 
 cd dir_name -->  to change the directory
+
+editor
+-------
+by using editor we can create and edit the file.
+VIM editor --> it is latest version Visually improved 
+upgrade version to vi version.
+
+In this editor there are 3 types of modes.
+1. ESC mode --> by defualt it will be in ESC mode only 
+2. Insert mode --> press i to navigate to insert mode. directly we can't navigate from colon mode to insert mode or vice-versa
+3. colon/ command line mode --> press ESC to navigate to colon mode.
+
+colon mode commands
+--------------------
+:q --> used to quit the file
+:w --> to save the content
+:wq --> to save and quit the file 
+:set nu --> to display numbers
+:set nonu --> to remove numbers
+:/<word_to_find> --> seach from top
+** need to navigate next word press 'N'
+:?<word_to_find> --> search from bottom 
+:noh --> remove the highlighted content
+:s/<which_word>/<what_you_want> --> where the cursor is present, in that line replace the first occurance matching word. 
+:s/<which_word>/<what_you_want>/g --> where the cursor is present, in that line replace the all occurance matching word. 
+:%s/<which_word>/<what_you_want>/g --> realce all matching words in that file.
+:%d --> delect the content in that file.
+% --> indicates all, if you want particular line you can replace the % with that line number.
+
+ESC mode commands
+------------------
+u --> undo go back to previous changes
+shift + g --> go to bottom line 
+gg --> go to top line 
+yy --> copy the line where cursor present
+p --> paste the content one time
+np --> replace n with particular number it can paste that many times
+dd --> delect the line 
+
+insert mode --> can use only for insert the data 
+
+permissions
+-----------
+
