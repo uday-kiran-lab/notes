@@ -8,7 +8,7 @@ syntax for knowing about commands --> command-name --help
 pwd --> present work directory 
 cd --> change directory
 cd / --> change to root dirctory 
-cd .. --> change to previous directory (one back step )
+cd .. --> change to previous directory ( one back step )
 
 File handling commands
 ----------------------
