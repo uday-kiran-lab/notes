@@ -119,10 +119,47 @@ gg --> go to top line
 yy --> copy the line where cursor present
 p --> paste the content one time
 np --> replace n with particular number it can paste that many times
-dd --> delect the line 
+dd --> delete the line 
 
 insert mode --> can use only for insert the data 
 
 permissions
 -----------
+every file and directory have certain permission in linux.
+only owner or root user can change the permissions.
+
+example: 
+$ ls -l
+
+drwxr-xr-x. 4 root root    68 Jun 13 20:25 tuned
+-rw-r--r--. 1 root root  4017 Feb 24  2022 vimrc
+first letter defines which type of file 
+for vimrc is a normal file and it is denoted -
+tuned is a directory and it is denoted d
+rw-r--r-- ==> example of vimrc file.
+the string actually have three different types of permissions
+rw- ==> defines user/owner permissions
+r-- ==> defines usergroup permissions
+r-- ==> defines others permissions
+
+In linux permissions are denoted with symbolic.
+u -> users
+g -> usergroup
+o -> others
+
+r -> read -> 4
+w -> write -> 2
+x -> excute -> 1
+
+command for changing permissions :  chmod
+chmod o+x <filename> #adding excute permissions to others 
+chmod ugo+rw <filename> #adding read and write permissions to user,group and others
+==>above permissions also represnts with numbers also
+chmod 761 <filename> 
+# it defines user having read, write and excute (4+2+1)
+# it defines group having read and write (4+2)
+# it defines others having excute only 
+
+
+
 
