@@ -41,7 +41,7 @@ pipe ' | ' --> used comibine the o/p from two commands
 
 file download commands
 -----------------------
-wget --> download teh file from the URL
+wget --> download the file from the URL
 wget <URL>
 
 curl --> show the content from URL
